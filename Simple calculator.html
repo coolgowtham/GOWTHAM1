@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+function calc(val1,val2,ope){
+if(ope=="ADD"){
+var sum = parseInt(val1)+parseInt(val2);
+ document.getElementById("val3").value = sum;
+}
+else if(ope=="SUB"){
+var dif = val1-val2;
+ document.getElementById("val3").value = dif;
+}
+else if(ope=="MUL"){
+var mul = parseInt(val1)*parseInt(val2);
+ document.getElementById("val3").value = mul;
+}
+else if(ope=="DIV"){
+var div = parseInt(val1)/parseInt(val2);
+ document.getElementById("val3").value = div;
+}
+else{
+var mod = parseInt(val1)%parseInt(val2);
+ document.getElementById("val3").value = mod;
+}
+}
+</script>
+</head>
+<body>
+<center>input1: <input type="number" id="val1"/></br></br></center>
+<center>input2: <input type="number" id="val2"/></br></br></center>
+<center>output: <input type="number" id="val3"/></br></br></center>
+<center><button onclick="calc(document.getElementById('val1').value,document.getElementById('val2').value,'ADD')"><b>Add</b></button></br></br></center>
+<center><button onclick="calc(document.getElementById('val1').value,document.getElementById('val2').value,'SUB')"><b>Sub</b></button></br></br></center>
+<center><button onclick="calc(document.getElementById('val1').value,document.getElementById('val2').value,'MUL')"><b>Mul</b></button></br></br></center>
+<center><button onclick="calc(document.getElementById('val1').value,document.getElementById('val2').value,'DIV')"><b>Div</b></button></br></br></center>
+<center><button onclick="calc(document.getElementById('val1').value,document.getElementById('val2').value,'MOD')"><b>Mod</b></button></br></br></center>
+</body>
+</html>
