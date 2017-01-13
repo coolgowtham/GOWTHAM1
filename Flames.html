@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function flames(input1,input2){
+                 var com="flames";
+                for(var i=0;i<input1.length;i++){
+                     for(var j=0;j<input2.length;j++){
+                         if(input1.charCodeAt(i)==input2.charCodeAt(j)){
+                             input1=input1.substring(0, i)+input1.substring(i+1,input1.length);
+                    	     input2=input2.substring(0, j)+input2.substring(j+1,input2.length);
+	                    j=0;
+        	            i=0;
+                	    break;
+                		}
+            		}
+        	}
+        	var l=parseInt(input1.length)+parseInt(input2.length);
+	        var count=1;
+        	for(var k=0;k<com.length;){
+	        	if(com.length==1)
+        			break;
+        		if(count==l){
+        			count=1;
+        			com=com.replace(""+com.charAt(k),"");
+        			if(k>=com.length-1){
+        				if(k==com.length)
+            					k=0;
+               			}		
+        		}
+        		else if(l!=count){
+        			count++;
+        			if(k>=com.length-1){
+            			k=-1;	
+            		}
+        		k++;
+        		continue;
+        	}      	
+        }
+                 switch(com.charAt(0))
+		 {
+			case 'f': 
+				alert("Relationship = Friends"); 
+				break;
+		   	case 'l': 
+				alert("Relationship = Lovers"); 
+				break;
+			case 'a': 
+				alert("Relationship = Affections"); 
+				break;
+			case 'm': 
+				alert("Relationship = Married"); 
+				break;
+			case 'e': 
+				alert("Relationship = Enemy"); 
+				break;
+			case 's': 
+				alert("Relationship = Brother & Sisters"); 
+				break;
+		  }
+            }
+        </script>
+    </head>
+    <body>
+    <center>input1:<input type="text" id="input1" /></br></br></center>
+    <center>input2:<input type="text" id="input2" /></br></br></center>
+
+    <center><button onclick="flames(document.getElementById('input1').value,document.getElementById('input2').value)" >RelationShip</button></center>
+</body>
+</html>
