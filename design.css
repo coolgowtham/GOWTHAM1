@@ -1,0 +1,48 @@
+html,body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#div1{
+	height: 10%;
+	background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+	font-family: "algerian";
+	font-size: 30px;
+	overflow:hidden;
+	color:#888888;
+	
+}
+#div2{
+	height: 850px;
+	width: 20%;
+	float: left;
+	background: linear-gradient(to right, yellow,green);
+	font-family: "impact";
+    font-size : 2rem;
+}
+#div3{
+	height: 915px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: linear-gradient(to left,indigo,violet);
+}
+p{
+	text-align: "center";
+	font-size: 2rem;
+	font-family: "Times New Romen";
+	color:hsla(75%,100%,50%,1);
+}
+a{
+		text-decoration: none;
+}
+a:visited {
+    color: blue;
+}
